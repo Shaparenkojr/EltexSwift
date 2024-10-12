@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="78t-dR-RWI">
+                                <rect key="frame" x="0.0" y="377" width="440" height="545"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m2S-m4-U8j" userLabel="Stack Views">
+                                        <rect key="frame" x="0.0" y="0.0" width="440" height="102.66666666666667"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEE-Z9-AKS" customClass="RadiusButtons" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="102.66666666666667"/>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="pEE-Z9-AKS" secondAttribute="height" multiplier="1:1" id="Uq4-uj-tMA"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="AC">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="33"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="AC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Bl-5z-MHu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQ7-on-ngn" customClass="RadiusButtons" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="112.66666666666669" y="0.0" width="102.33333333333331" height="102.66666666666667"/>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="+/-">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="plusMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8rY-0g-7v4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKA-1F-rjP" customClass="RadiusButtons" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="224.99999999999997" y="0.0" width="102.66666666666666" height="102.66666666666667"/>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="%">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="percent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xXw-fV-9Gh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5p-1n-mz6" customClass="RadiusButtons" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="337.66666666666669" y="0.0" width="102.33333333333331" height="102.66666666666667"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="÷">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="divide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CKQ-mb-CH9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YHX-cQ-AXK" userLabel="Stack Views">
+                                        <rect key="frame" x="0.0" y="112.66666666666669" width="440" height="102.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mj8-Cu-CcD" customClass="RadiusButtons" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="mj8-Cu-CcD" secondAttribute="height" multiplier="1:1" id="59D-Ua-XHg"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="7">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapSeven:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zFX-GC-zut"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgp-5C-1kn" customClass="RadiusButtons" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="112.66666666666669" y="0.0" width="102.33333333333331" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="8">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapEight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1QK-xU-SSH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ew3-f3-Ukb" customClass="RadiusButtons" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="224.99999999999997" y="0.0" width="102.66666666666666" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="9">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapNine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eZV-pS-7d2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NK-ll-dlW" customClass="RadiusButtons" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="337.66666666666669" y="0.0" width="102.33333333333331" height="102.33333333333333"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="×">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="multiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pyf-rJ-jst"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EbK-hV-FIe" userLabel="Stack Views">
+                                        <rect key="frame" x="0.0" y="224.99999999999997" width="440" height="102.66666666666666"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg9-8a-FwT" customClass="RadiusButtons" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="102.66666666666667"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="lg9-8a-FwT" secondAttribute="height" multiplier="1:1" id="EC4-Pb-ZeO"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="4">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapFour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UHz-D6-JVb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RlU-Vv-dsg" customClass="RadiusButtons" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="112.66666666666669" y="0.0" width="102.33333333333331" height="102.66666666666667"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="5">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="quZ-cE-bZG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2t-qx-cit" customClass="RadiusButtons" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="224.99999999999997" y="0.0" width="102.66666666666666" height="102.66666666666667"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="6">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapSix:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dCy-Rw-iAn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKN-Eh-unc" customClass="RadiusButtons" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="337.66666666666669" y="0.0" width="102.33333333333331" height="102.66666666666667"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="-">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="minus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Fa-E0-YGA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="D86-mn-arx" userLabel="Stack Views">
+                                        <rect key="frame" x="0.0" y="337.66666666666663" width="440" height="102.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lT0-K3-Mkb" customClass="RadiusButtons" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="lT0-K3-Mkb" secondAttribute="height" multiplier="1:1" id="hKC-zc-biL"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="1">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W7C-tl-myO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jif-6b-2vJ" customClass="RadiusButtons" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="112.66666666666669" y="0.0" width="102.33333333333331" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="2">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AAO-OK-Ak3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ub3-MI-1nD" customClass="RadiusButtons" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="224.99999999999997" y="0.0" width="102.66666666666666" height="102.33333333333333"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="3">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nGE-ho-fFs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07O-iK-lXG" customClass="RadiusButtons" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="337.66666666666669" y="0.0" width="102.33333333333331" height="102.33333333333333"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="+">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="plus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HSY-XD-ewx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qNN-eQ-c4e" userLabel="Stack Views">
+                                        <rect key="frame" x="0.0" y="450" width="440" height="95"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YH8-tT-e1b" customClass="tapZeroButton" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="231" height="95"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="gZZ-ln-lQG"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="    0">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapZero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cVU-8U-gRk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bnc-eJ-I2H" customClass="tapEqal" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="241" y="0.0" width="94" height="95"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="95" id="46R-q7-rf6"/>
+                                                    <constraint firstAttribute="width" constant="94" id="jS1-Y7-WAv"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=",">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="decimal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ged-qp-iCd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ay-tT-HfW" customClass="tapEqal" customModule="calc" customModuleProvider="target">
+                                                <rect key="frame" x="345" y="0.0" width="95" height="95"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="95" id="5dA-BS-R2v"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="=">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="eqal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g77-01-x1p"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMj-XH-WNb">
+                                <rect key="frame" x="40" y="286.66666666666669" width="360" height="50.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="78t-dR-RWI" firstAttribute="top" secondItem="UMj-XH-WNb" secondAttribute="bottom" constant="40" id="JE9-A2-PQA"/>
+                            <constraint firstItem="78t-dR-RWI" firstAttribute="top" secondItem="UMj-XH-WNb" secondAttribute="bottom" constant="40" id="Lws-hb-FOt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UMj-XH-WNb" secondAttribute="trailing" constant="40" id="QXZ-aH-xJf"/>
+                            <constraint firstItem="UMj-XH-WNb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="dHx-Q1-E3M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="78t-dR-RWI" secondAttribute="trailing" id="eYf-r5-Mhx"/>
+                            <constraint firstItem="78t-dR-RWI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fEG-1K-HVh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="78t-dR-RWI" secondAttribute="bottom" id="gBs-U2-Jbk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="UMj-XH-WNb" id="fEA-RI-30M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3.8167938931297707" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
